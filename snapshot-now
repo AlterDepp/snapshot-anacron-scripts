@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+/daten/lokal/Programme/btrfs-snapshot-rotation/btrfs-snapshot /media/Daten/data/hillibilly /media/Daten/data/snapshot/hillibilly manual 5
