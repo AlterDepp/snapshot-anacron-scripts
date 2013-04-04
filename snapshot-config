@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+SNAPSHOT=/daten/lokal/Programme/btrfs-snapshot-rotation/btrfs-snapshot
+BASEDATA=/media/Daten/data
+BASESNAPSHOT=/media/Daten/snapshot
+VOLUMES="machine/*/* share user/*"

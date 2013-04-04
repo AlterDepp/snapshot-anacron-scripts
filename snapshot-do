@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+
+# do snapshots using https://github.com/mmehnert/btrfs-snapshot-rotation
+
+# loop over all configured volumes (may include wildcards)
+for volume in $VOLUMES
+do
+  # expand wildcards in source directory
+  for SOURCE in $BASEDATA/$volume
+  do
+    # replace source directory by target directory
+    TARGET=${SOURCE/$BASEDATA/$BASESNAPSHOT}
+    # do the snapshot by calling btrfs-snapshot-rotation
+    $SNAPSHOT $SOURCE $TARGET $SNAPNAME $SNAPCOUNT
+  done
+done
+
