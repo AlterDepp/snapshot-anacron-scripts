@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
-DIR=`dirname $0`
+SCRIPTNAME=`readlink -f $0`
+DIR=`dirname $SCRIPTNAME`
 
 # config for 'now'
 SNAPNAME=weekly
